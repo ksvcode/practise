@@ -1,0 +1,23 @@
+class Solution {
+    int currentwealth ;
+        int returnwealth ;
+    
+    public int maximumWealth(int[][] accounts) {
+        
+        for (int i = 0; i < accounts.length; i++)
+        {   
+            for ( int j = 0 ; j < accounts[i].length ; j++)
+            {
+                currentwealth = currentwealth + accounts[i][j];
+            }
+         if ( currentwealth > returnwealth )
+            {
+                returnwealth = currentwealth ;
+            }                  
+        
+             currentwealth = 0;
+        }           
+        return(returnwealth);
+    }
+
+                }
