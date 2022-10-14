@@ -1,0 +1,6 @@
+class Solution {
+    public boolean canConstruct(String ransomNote, String magazine) {
+            boolean iscontains = magazine.contains(ransomNote);
+            return iscontains;
+    }
+}
