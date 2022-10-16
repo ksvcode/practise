@@ -1,0 +1,45 @@
+class Solution {
+    public int lengthOfLongestSubstring(String s) {
+        int maxlen = 0 ;
+        String maxstr = "";
+        String currentstr  = "";
+        String currentpos = "";
+        if(s.length() > 0)
+        {
+            maxlen = 1;
+        }
+     for( int i = 0 ; i < s.length() ; i ++ )        
+     {   currentstr = "";
+         currentstr = currentstr +  s.charAt(i);
+        for ( int j = i+1 ; j < s.length(); j++ )
+        {
+            //System.out.println(s.length()-1);
+            currentpos = "";
+            currentpos = currentpos + s.charAt(j) ;
+          // System.out.println("value of i " + i + " value of j " + j + " " +currentpos+ " "+currentstr);
+            if (currentstr.contains( currentpos ))
+            {
+                 //System.out.println("value of maxlen " + maxlen + " value of maxstr " + maxstr);
+            
+                break;
+                
+            }  else
+            {
+              currentstr = currentstr + currentpos ;  
+            }  
+            
+                 if(currentstr.length() >= maxlen)
+             {
+                 maxlen = currentstr.length() ;
+                 maxstr = currentstr;
+                 
+                 ;
+             }
+        }
+       
+     }
+    return maxlen;
+    }
+}
+
+//clear all variables
