@@ -1,0 +1,21 @@
+class Solution {
+    public boolean checkIfPangram(String sentence) {
+     String alpha = "abcdefghijklmnopqrstuvwxyz";
+     Boolean iscontains = false;
+        for(int i=0 ; i<alpha.length(); i++){
+            String currentchar = "";
+            currentchar = currentchar + alpha.charAt(i) ;
+            //System.out.println("value of currentchar" + currentchar);
+           
+            iscontains = sentence.contains(currentchar);
+            // System.out.println("value of iscontains" + iscontains);
+            if ( iscontains == false )
+            {
+                break;
+            }
+        }
+         //System.out.println("value of iscontains" + iscontains);
+        return iscontains;
+            
+    }
+}
