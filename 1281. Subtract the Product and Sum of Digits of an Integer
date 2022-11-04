@@ -1,0 +1,16 @@
+class Solution {
+    public int subtractProductAndSum(int n) {
+        
+        int mod = 0;
+        int sum = 0;
+        int mul = 1;
+        while ( n > 0)
+        {
+            mod = n%10;
+            n=n/10;
+            sum = sum + mod;
+            mul = mul * mod;
+        }
+return (mul-sum);    }
+};
+ 
