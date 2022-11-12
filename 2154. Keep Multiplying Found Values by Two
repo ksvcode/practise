@@ -1,0 +1,20 @@
+class Solution {
+    public int findFinalValue(int[] nums, int original) {
+        //int sum = original;
+        
+        for(int i =0 ; i<nums.length;++i)
+        {
+           //  System.out.print(i + "\n");
+            if(original == nums[i])
+            {
+               // sum = sum + nums[i];
+                System.out.print(nums[i] + "\n");
+                System.out.print(original + "\n");
+               // System.out.print(sum + "\n");
+                i = -1 ;
+                original = original*2;
+            }
+        }
+        return original;
+    }
+}
