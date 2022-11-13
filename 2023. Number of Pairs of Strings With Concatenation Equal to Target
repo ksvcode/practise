@@ -1,0 +1,24 @@
+class Solution {
+    public int numOfPairs(String[] nums, String target) {
+        int count = 0;
+        String concated;
+        for ( int i = 0 ; i<= nums.length-1 ; i++)
+        {
+            for ( int j = i+1 ; j <= nums.length -1 ; j++ )
+            {   
+                concated = nums[i]+nums[j];
+                if(concated.equals(target))
+                    {                   
+                     count++;
+                    }
+                concated = nums[j]+nums[i];
+                if(concated.equals(target))
+                    {                   
+                     count++;
+                    }               
+            }
+                
+        }    
+    return count;
+    }
+}
